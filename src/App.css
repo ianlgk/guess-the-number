@@ -1,0 +1,143 @@
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+/* Container Styles */
+
+/* Column Styles */
+.container .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Column Styles */
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  background-image: -webkit-linear-gradient(#EF6C00, #DB6300);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.header hr {
+  background-color: #CFCFCF;
+  width: 75%;
+  height: 1px;
+  opacity: 0.3;
+}
+/* Header Styles */
+
+/* Led-display Styles */
+.led-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.led-display span {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.led-display .error {
+  color: #CC3300;
+}
+
+.led-display .sucess {
+  color: #32BF00;
+}
+
+.led-display .normal {
+  color: #FF6600;
+}
+
+.led-display .btnReSubmit {
+  color: #FFF;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(#434854, #9E9E9E);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.led-display .btnReSubmit:hover {
+  filter: brightness(1.05);
+}
+
+.led-display .btnReSubmit img {
+  margin-right: 0.5rem;
+}
+/* Led-display Styles */
+
+/* data-input Styles */
+.data-input {
+  display: flex;
+}
+
+.data-input input {
+  border: 1px solid #CFCFCF;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-right: 0.5rem;
+  transition: border 0.2s;
+  min-width: 200px;
+}
+
+.data-input input:focus {
+  border: 1px solid #EF6C00;
+}
+
+.data-input .inputDisabled {
+  background-color: #F5F5F5;
+}
+
+.data-input .btnSubmit {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #FFF;
+  background-image: -webkit-linear-gradient(#EF6C00, #C0661C);
+  padding: calc(0.75rem + 1.5px);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.data-input .btnSubmit:hover {
+  filter: brightness(1.05);
+}
+
+.data-input .buttonDisabled {
+  background-image: -webkit-linear-gradient(#DDDDDD, #DDDDDD);
+  cursor: default;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #FFF;
+  padding: calc(0.75rem + 1.5px);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.data-input .buttonDisabled:hover {
+  filter: brightness(1);
+}
+/* data-input Styles */
