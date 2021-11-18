@@ -52,7 +52,8 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiRequest]);
 
-  // Hook para atualizar a classe do span que gerencia o feedback para o usuário, executa quando o estado da 'message' é alterado
+  // Hook para atualizar a classe do span e cor do número do led que gerencia o feedback para o usuário,
+  // executa quando o estado da 'message' é alterado
   useEffect(() => {
     let spanClassName = '';
     let numberColor = '';
@@ -83,7 +84,7 @@ function App() {
   // Função chamada quando clica no botão "ENVIAR"
   function handleTryNumber() {
     // Verifica se o input é válido e qual o status será exibido para o usuário
-    if (parseInt(input) >= 0 && parseInt(input) < 1000) {
+    if (parseInt(input) >= 0 && parseInt(input) < 1000 && input.indexOf('-') === -1) {
       if (parseInt(input) === number) {
         setMessage('Acertou!!!!');
         setButton(true);
@@ -92,8 +93,8 @@ function App() {
       } else if (parseInt(input) <= number) {
         setMessage('É maior');
       }
-    } else {
-      setMessage('invisible');
+      // Atualiza o valor que aparece no LED
+      setLed(input);
     }
 
     // Reseta o input
@@ -370,7 +371,6 @@ function App() {
             type="button"
             onClick={() => {
                 handleTryNumber();
-                setLed(input);
               }
             }
             disabled={(message === 'ERRO' || message === 'Acertou!!!!' || message === 'Valor Inválido') ? true : false }
