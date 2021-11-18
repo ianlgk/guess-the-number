@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 .header h1 {
@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 .led-display span {
@@ -68,6 +68,202 @@
   color: #FF6600;
 }
 
+.led-display .invisible {
+  opacity: 0;
+}
+
+/* LED Display Styles */
+#display {
+  margin-bottom: 2rem;
+}
+
+.number-container {
+	position: relative;
+	float: left;
+}
+
+.number-container div.segment-x,
+.number-container div.segment-y {
+	position: absolute;
+}
+
+.number-container span.segment-border {
+	display: block;
+	position: absolute;
+}
+
+.number-container.number-size {
+	width: 122px;
+	height: 220px;
+  margin-right: 1rem;
+}
+
+.number-container.number-size:last-child {
+  margin-right: 0;
+}
+
+.number-container.number-size .segment-x {
+	width: 72px;
+	left: 13px;
+	border-bottom: 12px solid #262A34;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+}
+
+.number-container.number-size .segment-x.sucess {
+  border-bottom: 12px solid #32BF00;
+}
+
+.number-container.number-size .segment-x.error {
+  border-bottom: 12px solid #CC3300;
+}
+
+.number-container.number-size .segment-x .segment-border {
+	top: 12px;
+	left: -12px;
+	right: -12px;
+	border-top: 12px solid #262A34;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+}
+
+.number-container.number-size .segment-x .segment-border.sucess {
+  border-top: 12px solid #32BF00;
+}
+
+.number-container.number-size .segment-x .segment-border.error {
+  border-top: 12px solid #CC3300;
+}
+
+.number-container.number-size .segment-y {
+	height: 72px;
+	width: 0;
+	border-right: 12px solid #262A34;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+}
+
+.number-container.number-size .segment-y.sucess {
+  border-right: 12px solid #32BF00;
+}
+
+.number-container.number-size .segment-y.error {
+  border-right: 12px solid #CC3300;
+}
+
+.number-container.number-size .segment-y .segment-border {
+	position: relative;
+	left: 12px;
+	height: 72px;
+	margin-top: -12px;
+	border-left: 12px solid #262A34;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+}
+
+.number-container.number-size .segment-y .segment-border.sucess {
+  border-left: 12px solid #32BF00;
+}
+
+.number-container.number-size .segment-y .segment-border.error {
+  border-left: 12px solid #CC3300;
+}
+
+/* Medidas para colocar o segmento na posição correta */
+.number-container.number-size .segment-a {
+	top: 0;
+}
+
+.number-container.number-size .segment-b {
+	top: 13px;
+	left: 98px;
+}
+
+.number-container.number-size .segment-c {
+	top: 111px;
+	left: 98px;
+}
+
+.number-container.number-size .segment-d {
+	top: 196px;
+}
+
+.number-container.number-size .segment-e {
+	top: 111px;
+	left: 0px;
+}
+
+.number-container.number-size .segment-f {
+	top: 13px;
+	left: 0px;
+}
+
+.number-container.number-size .segment-g {
+	top: 98px;
+}
+
+/* Lógica para alterar o número variando a opacidade de cada segmento */
+.number-no-1 .segment-a,
+.number-no-1 .segment-d,
+.number-no-1 .segment-e,
+.number-no-1 .segment-f,
+.number-no-1 .segment-g {
+	/*display: none;*/
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+}
+
+.number-no-2 .segment-c,
+.number-no-2 .segment-f {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-3 .segment-e,
+.number-no-3 .segment-f {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-4 .segment-a,
+.number-no-4 .segment-d,
+.number-no-4 .segment-e {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-5 .segment-b,
+.number-no-5 .segment-e {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-6 .segment-b {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-7 .segment-d,
+.number-no-7 .segment-e,
+.number-no-7 .segment-f,
+.number-no-7 .segment-g {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+/* O número 8 preenche todos os segmentos, portanto não é necessário formatação */
+
+.number-no-9 .segment-e {
+	/*display: none;*/
+	opacity: 0.1;
+}
+
+.number-no-0 .segment-g {
+	/*display: none;*/
+	opacity: 0.1;
+}
+/* LED Display Styles */
+
 .led-display .btnReSubmit {
   color: #FFF;
   border-radius: 4px;
@@ -80,6 +276,11 @@
   transition: all 0.2s;
 }
 
+.led-display .invisible {
+  opacity: 0;
+  cursor: default;
+}
+
 .led-display .btnReSubmit:hover {
   filter: brightness(1.05);
 }
@@ -89,7 +290,7 @@
 }
 /* Led-display Styles */
 
-/* data-input Styles */
+/* Data-input Styles */
 .data-input {
   display: flex;
 }
@@ -140,4 +341,4 @@
 .data-input .buttonDisabled:hover {
   filter: brightness(1);
 }
-/* data-input Styles */
+/* Data-input Styles */
