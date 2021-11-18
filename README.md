@@ -18,18 +18,24 @@ If you want to install Guess The Number, follow this steps:
 ```
   git init
   git clone https://github.com/ianlgk/guess-the-number.git
+  cd 'guess-the-number'
   yarn
 ```
 
-1. git init initializes or reboots a repository
-2. git clone will clone the repository on your local machine
-3. yarn will download all project's dependecies
-
-If your intention is to run the application in a production mode, follow this steps:
+If your intention is to run the application in production mode, follow the last steps, then these steps:
 
 ```
 serve -s build
 ```
+
+### 🤔 Commands
+Maybe you are thinking, "🤔 What are this terminal commands doing?", but don't be worried!
+I'm gonna show you one by one what are their purpose:
+1. git init      : initializes or reboots a repository
+2. git clone     : clone the repository on your local machine
+3. cd 'file_name': enter on the 'file_name' directory
+4. yarn: install all project's dependecies
+5. serve -s 'directory' : will deploy the 'directory'
 
 
 ## ☕ How can I use Guess The Number?
