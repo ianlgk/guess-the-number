@@ -46,7 +46,7 @@ Now that you have installed the Guess The Number, follow this steps to run the p
   yarn start
 ```
 
-In case that you do not want to install the project, you can use the Guess The Number through the following link: guess-the-number-ianlgk.netlify.app
+In case that you do not want to install the project, you can use the Guess The Number through the following link: https://guess-the-number-ianlgk.netlify.app
 
 ## 🖥️ Technologies
 
